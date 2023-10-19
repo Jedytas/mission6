@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v2 Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+        <label for="product">Выберите тип товара:</label>
+        <select id="product" onchange="updateOptions()">
+            <option value="110">Black Monster - 110 рублей</option>
+            <option value="60">TORNADO - 60 рублей</option>
+            <option value="200">Red Bull - 200 рублей</option>
+        </select>
+
+        <div class="options" id="options">
+            <label for="productOption">Выберите вкус:</label>
+            <select id="productOption">
+                <option value="0">Storm (original)</option>
+                <option value="15">sKILL - 15 рублей</option>
+                <option value="30">Raspberries - 30 рублей</option>
+            </select>
+        </div>
+
+        <div class="properties" id="properties">
+            <label for="productProperty">Выберите свойство товара (дополнительная опция):</label>
+            <input type="checkbox" id="productProperty" value="50"> Без сахара - 50 рублей
+        </div>
+
+        <label for="quantity">Введите количество товара:</label>
+        <input type="text" id="quantity" placeholder="Количество">
+
+        <p id="result"></p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
